@@ -34,8 +34,12 @@
                 ]
             },
             "osx": {
-                "command": "g++",
+                "command": "sh",
                 "args": [
+                    "-c",
+                    "mkdir -p bin",
+                    "&",
+                    "g++",
                     "-g",
                     "--std=c++17",
                     "main.cpp",

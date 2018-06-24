@@ -7,8 +7,13 @@
             "label": "build",
             "type": "shell",
             "linux": {
-                "command": "g++",
+                "command": "sh",
                 "args": [
+                    "/C",
+                    "mkdir",
+                    "bin",
+                    "&",
+                    "g++",
                     "-g",
                     "--std=c++17",
                     "main.cpp",
@@ -16,8 +21,13 @@
                 ]
             },
             "windows": {
-                "command": "g++",
+                "command": "cmd",
                 "args": [
+                    "/C",
+                    "mkdir",
+                    "bin",
+                    "&",
+                    "g++",
                     "-g",
                     "--std=c++17",
                     "main.cpp",

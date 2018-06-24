@@ -9,9 +9,8 @@
             "linux": {
                 "command": "sh",
                 "args": [
-                    "/C",
-                    "mkdir",
-                    "bin",
+                    "-c",
+                    "mkdir -p bin",
                     "&",
                     "g++",
                     "-g",

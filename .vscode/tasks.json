@@ -21,7 +21,16 @@
                     "-g",
                     "--std=c++17",
                     "main.cpp",
-                    "-o", "${workspaceFolder}/bin/out.exe"
+                    "-o", "${workspaceFolder}/bin/out"
+                ]
+            },
+            "osx": {
+                "command": "g++",
+                "args": [
+                    "-g",
+                    "--std=c++17",
+                    "main.cpp",
+                    "-o", "${workspaceFolder}/bin/out"
                 ]
             },
             "options": {
@@ -51,8 +60,19 @@
                     "bin\\*"
                 ]
             },
+            "osx": {
+                "command": "rm",
+                "args": [
+                    "-rfv",
+                    "bin/*"
+                ]
+            },
             "options": {
                 "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
             },
             "problemMatcher": []
         }
